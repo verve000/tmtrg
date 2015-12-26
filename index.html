@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,  initial-scale=1, maximum-scale=1, user-scalable=yes">
+    <title>RGK</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/site.css"/>
+    <script>
+        function toggle(checked) {
+            var el = document.getElementById("but_go"),
+                checkbox = document.getElementById("checkbox"),
+                cancel = document.getElementById("but_cancel");
+
+            if (checked.checked == true) {
+                checkbox.checked = true;
+				el.disabled=false;
+				cancel.style.cssText="visibility:visible";
+				el.style.cssText="cursor:pointer";
+
+            } else {
+                checkbox.checked = false;
+				el.disabled=true;
+				cancel.style.cssText="visibility:hidden";
+				el.style.cssText="background-color:#000; cursor:not-allowed";
+				//el.style.cssText="cursor:not-allowed";
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="content">
+    <header>
+        <div class="container_top">
+            <div class="label"></div>
+            <span>12+</span>
+        </div>
+        <div class="logo">VIDEO <span>Tube</span></div>
+    </header>
+    <div class="monitor">
+        <div class="vid_hd_fon">
+            <span class="text_vid_hd">Видео&nbsp;HD</span>
+            <img src="imagenes/clock.png" class="clock" alt="Clock" title="Clock">
+            <img src="imagenes/share.png" class="share" alt="Share" title="Share">
+        </div>
+        <img class="bob" src="imagenes/bob.png" alt="Bob" title="Bob" >
+        <div class="para_buttones">         
+            <button id="but_go" class="but_go">
+                <span class="button_txt">Смотреть</span>
+            </button>
+            <div class="info">
+                Просмотров:&nbsp;14204
+            </div>
+            <button id="but_cancel" class="but_cancel" onclick="toggle(this)">
+                Отмена
+            </button>
+        </div> 
+    </div>    
+    <div class="panel">
+        <div class="bar">
+            <div class="bar_left"></div>
+            <div class="bar_middle"></div>
+            <div class="bar_right"></div>
+        </div>
+        <div class="flex">
+            <img src="imagenes/but_play.png" id="but_play" class="but_play"  alt="Play" title="Play">
+            <img src="imagenes/sound.png" class="sound">
+            <span class="text_time">0:01&nbsp;/&nbsp;15:44</span>
+            <div class="full_screen_fon">
+            <img src="imagenes/full_screen.png" class="full_screen" alt="Full screen" title="Full screen">
+            </div>
+        </div>
+    </div>
+    <footer>
+        <input id="checkbox" type="checkbox" id="checkbox" onchange="toggle(this)" checked>
+        <label class="checkbox" for="checkbox">
+            <span class="label">
+                Подтверждаю, что люблю мультики, и
+                соглашаюсь с <a href="javascript:void(0);">правилами предоставления
+                услуги</a>
+           </span>
+        </label>
+        <p class="bot_foo">Услуга: domainname.eu. Провайдер ООО “Эс Эм Экс Комьюникейшнс”. Стоимость: 20 руб в сутки с НДС.</p>
+    </footer>
+</div>    
+</body>
+</html>
