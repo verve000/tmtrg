@@ -344,11 +344,17 @@ input[type=checkbox]:checked + .checkbox:before {
 	.but_go {font-size: 9vmin;}
 	.para_buttones {position: absolute; top: -90px;}
 }
-@media (min-width: 481px) and (max-width: 800px) and (orientation:landscape) {
+@media (min-width: 481px) and (max-width: 600px) and (orientation:landscape) {
 	.but_go {font-size: 9vmin; height: 90px;}
 	.para_buttones {position: absolute; top: -250px;}
 	.info {font-size: 14px;}
 }
+@media (min-width: 601px) and (max-width: 800px) and (orientation:landscape) {
+	.but_go {font-size: 7vmin; height: 90px;}
+	.para_buttones {position: absolute; top: -250px;}
+	.info {font-size: 14px;}
+}
+
 
 @media (min-width: 320px) and (max-width: 359px) {
 	.monitor, .bob {max-height:220px;}
